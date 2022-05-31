@@ -8,7 +8,7 @@ import static io.restassured.RestAssured.given;
 
 public class UpdateBookingRequest {
 
-    public static Response updateBookingRequest(JSONObject updateBooking, String token, String bookingId){
+    public static Response updateBookingRequest(JSONObject updateBooking, String token, String bookingId) {
         return given()
                 .contentType(ContentType.JSON)
                 .body(updateBooking.toString())

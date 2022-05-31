@@ -11,7 +11,6 @@ import org.junit.jupiter.api.Test;
 import request.AuthCreateTokenRequest;
 import request.DeleteBookingRequest;
 import request.PostBookingRequest;
-
 import static org.assertj.core.api.Assertions.assertThat;
 
 public class DeleteBookingTest {

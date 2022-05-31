@@ -27,13 +27,14 @@ public class UpdateBookingTest {
     public void updateBookingTest() {
         JSONObject defultBooking = BookingDate.getDefultBooking();
         Response postBookingRequest = PostBookingRequest.getPostBookingRequest(defultBooking);
-        String bookingId = postBookingRequest.jsonPath().getString("bookingid");
+        JsonPath json = postBookingRequest.jsonPath();
+        String bookingId = json.getString("bookingid");
 
         JSONObject updateBooking = UpdateBookingDate.updateBookingDate();
-        Response updateResponse = UpdateBookingRequest.updateBookingRequest(updateBooking, bookingId, token);
+        Response updateResponse = UpdateBookingRequest.updateBookingRequest(updateBooking, token, bookingId);
 
         JsonPath jsonPath = updateResponse.jsonPath();
-        assertThat(jsonPath.getString("firstname")).isEqualTo("Agnieszka");
-        assertThat(jsonPath.getString("additionalneeds")).isEqualTo("Roomservice");
+        assertThat(jsonPath.getString("firstname")).isEqualTo("Michał");
+        assertThat(jsonPath.getString("additionalneeds")).isEqualTo("Roomservie");
     }
 }

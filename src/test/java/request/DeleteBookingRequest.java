@@ -3,7 +3,6 @@ package request;
 import date.AdressUrl;
 import io.restassured.http.ContentType;
 import io.restassured.response.Response;
-
 import static io.restassured.RestAssured.given;
 
 public class DeleteBookingRequest {
