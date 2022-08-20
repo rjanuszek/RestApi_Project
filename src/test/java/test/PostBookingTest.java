@@ -13,8 +13,8 @@ public class PostBookingTest {
 
     @Test
     public void postBookingTest() {
-        JSONObject defultBooking = BookingDate.getDefultBooking();
-        Response postBooking = PostBookingRequest.getPostBookingRequest(defultBooking);
+        JSONObject defaultBooking = BookingDate.getDefultBooking();
+        Response postBooking = PostBookingRequest.getPostBookingRequest(defaultBooking);
         JsonPath jsonPath = postBooking.jsonPath();
         assertThat(jsonPath.getString("booking.firstname")).isEqualTo("Rafaela");
     }

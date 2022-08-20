@@ -25,8 +25,8 @@ public class DeleteBookingTest {
 
     @Test
     public void deleteBookingTest() {
-        JSONObject defultBooking = BookingDate.getDefultBooking();
-        Response postBookingRequest = PostBookingRequest.getPostBookingRequest(defultBooking);
+        JSONObject defaultBooking = BookingDate.getDefultBooking();
+        Response postBookingRequest = PostBookingRequest.getPostBookingRequest(defaultBooking);
 
         JsonPath jsonPath = postBookingRequest.jsonPath();
         String bookingid = jsonPath.getString("bookingid");

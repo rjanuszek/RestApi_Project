@@ -1,6 +1,6 @@
 package date;
 
-public class AdressUrl {
+public class AddressUrl {
 
     public static final String BASE_URL = "https://restful-booker.herokuapp.com";
     public static final String BOOKING_URL = "/booking";

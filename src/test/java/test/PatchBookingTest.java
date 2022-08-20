@@ -24,8 +24,8 @@ public class PatchBookingTest {
 
     @Test
     public void patchBookingTest() {
-        JSONObject defultBooking = BookingDate.getDefultBooking();
-        Response postBookingRequest = PostBookingRequest.getPostBookingRequest(defultBooking);
+        JSONObject defaultBooking = BookingDate.getDefultBooking();
+        Response postBookingRequest = PostBookingRequest.getPostBookingRequest(defaultBooking);
         JsonPath json = postBookingRequest.jsonPath();
         String bookingid = json.getString("bookingid");
 

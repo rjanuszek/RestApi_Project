@@ -1,6 +1,6 @@
 package request;
 
-import date.AdressUrl;
+import date.AddressUrl;
 import io.restassured.http.ContentType;
 import io.restassured.response.Response;
 import org.json.JSONObject;
@@ -13,7 +13,7 @@ public class PostBookingRequest {
                 .contentType(ContentType.JSON)
                 .body(newBooking.toString())
                 .when()
-                .post(AdressUrl.BASE_URL + AdressUrl.BOOKING_URL)
+                .post(AddressUrl.BASE_URL + AddressUrl.BOOKING_URL)
                 .then()
                 .statusCode(200)
                 .extract()

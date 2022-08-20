@@ -1,6 +1,6 @@
 package request;
 
-import date.AdressUrl;
+import date.AddressUrl;
 import io.restassured.http.ContentType;
 import io.restassured.response.Response;
 import static io.restassured.RestAssured.given;
@@ -12,7 +12,7 @@ public class DeleteBookingRequest {
                 .contentType(ContentType.JSON)
                 .header("Cookie", "token=" + token)
                 .when()
-                .delete(AdressUrl.BASE_URL + AdressUrl.BOOKING_URL + "/" + bookingid)
+                .delete(AddressUrl.BASE_URL + AddressUrl.BOOKING_URL + "/" + bookingid)
                 .then()
                 .extract()
                 .response();

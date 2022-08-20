@@ -1,6 +1,6 @@
 package request;
 
-import date.AdressUrl;
+import date.AddressUrl;
 import io.restassured.response.Response;
 import static io.restassured.RestAssured.given;
 
@@ -9,7 +9,7 @@ public class GetBookingIdsRequest {
     public static Response getBookingIdsRequest() {
         return given()
                 .when()
-                .get(AdressUrl.BASE_URL + AdressUrl.BOOKING_URL)
+                .get(AddressUrl.BASE_URL + AddressUrl.BOOKING_URL)
                 .then()
                 .statusCode(200)
                 .extract()

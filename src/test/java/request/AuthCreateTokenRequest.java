@@ -1,6 +1,7 @@
 package request;
 
-import date.AdressUrl;
+import date.AddressUrl;
+import date.AddressUrl;
 import io.restassured.http.ContentType;
 import org.json.JSONObject;
 import org.junit.jupiter.api.Test;
@@ -15,7 +16,7 @@ public class AuthCreateTokenRequest {
                 .contentType(ContentType.JSON)
                 .body(createToken.toString())
                 .when()
-                .post(AdressUrl.BASE_URL + AdressUrl.AUTH_URL)
+                .post(AddressUrl.BASE_URL + AddressUrl.AUTH_URL)
                 .then()
                 .statusCode(200)
                 .extract()

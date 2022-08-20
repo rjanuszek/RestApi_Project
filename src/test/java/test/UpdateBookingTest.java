@@ -25,10 +25,11 @@ public class UpdateBookingTest {
 
     @Test
     public void updateBookingTest() {
-        JSONObject defultBooking = BookingDate.getDefultBooking();
-        Response postBookingRequest = PostBookingRequest.getPostBookingRequest(defultBooking);
+        JSONObject defaultBooking = BookingDate.getDefultBooking();
+        Response postBookingRequest = PostBookingRequest.getPostBookingRequest(defaultBooking);
         JsonPath json = postBookingRequest.jsonPath();
         String bookingId = json.getString("bookingid");
+
 
         JSONObject updateBooking = UpdateBookingDate.updateBookingDate();
         Response updateResponse = UpdateBookingRequest.updateBookingRequest(updateBooking, token, bookingId);
